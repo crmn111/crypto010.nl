@@ -1,0 +1,64 @@
+<div class="wrapper" ng-class="{'showegg' : vm.showegg}">
+
+    <span class="img globe" ng-class="{'tomoon' : vm.tomoon}"></span>
+
+    <span class="img rocket" ng-class="{'tomoon' : vm.tomoon, 'rockmoon' : vm.rockmoon}"></span>
+
+    <span class="img moon" ng-class="{'tomoon' : vm.tomoon}"></span>
+
+    <span class="img bitcoin" ng-class="{'rockmoon' : vm.rockmoon}"></span>
+
+    <span class="img mars" ng-class="{'tomoon' : vm.tomoon}"></span>
+
+    <span class="img ethereum" ng-class="{'rockmoon' : vm.rockmoon}"></span>
+
+
+    <div class="textwrap">
+        <h1>CRYPTO<img src="/assets/favicon/apple-icon-60x60.png"><em>010</em> </h1>
+
+        <h2>Chat about Blockchain, Bitcoin, TheDAO, Ethereum, Trading, Developing and Moon</h2>
+
+        <h3 ng-class="{'tomoon' : vm.tomoon}">Friday 1 July 2016 - Location: Hotel New York, Rotterdam - Time: 19:00</h3>
+    </div>
+
+
+    <div class="countdown-timer">
+        <div class="time-to">
+      <span countdown on-ready-callback="onReady()" date="July 1, 2016 19:00:00">
+          <i><span class="days">0</span> Days</i>
+          <i><span class="hours">0</span> Hours</i>
+          <i><span class="minutes">0</span> Minutes</i>
+          <i><span class="seconds">0</span> Seconds</i>
+      </span>
+        </div>
+    </div>
+
+ <!--   <audio autoplay="autoplay" controls="controls" ng-hide="true">
+        <source src="music.ogg"/>
+        <source src="music.mp3"/>
+    </audio>-->
+
+    <section class="twitter" ng-class="{'show' : vm.twitter}">
+        <a class="twitter-timeline"  href="https://twitter.com/hashtag/crypto010" data-widget-id="735939335623725057">#crypto010 Tweets</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </section>
+
+    <footer>
+       <p>
+           <a href="http://www.dirkjandegroot.nl">MADE</a> WITH <i class="fa fa-heart" aria-hidden="true"></i> 4 CRYPTO - <a ng-click="vm.twitter = !vm.twitter">TOGGLE TWITTER</a>
+
+        </p>
+
+        <p>PRESS CTRL+J</p>
+    </footer>
+
+</div>
+
+
+<div class="egg" ng-class="{'showegg' : vm.showegg}">
+    <div>
+        <p>Press CTRL+J to toggle back to the main screen.</p>
+
+        <p>Contact us by joining our telegram group: <a href="https://telegram.me/joinchat/BdSr6wb8cpX-fKov_xXxxQ">EthereumNL</a>.</p>
+    </div>
+</div>

@@ -1,0 +1,314 @@
+body {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin:0; padding:0;
+  animation: backgroundAnimation 50s 0s infinite ease;
+  position: static;
+  font-family: Silom;
+
+  @media (min-width: 0px) and (max-width: 600px) {
+    background-image: url('/assets/backgrounds/space-640.jpg');
+  }
+
+  @media (min-width: 601px) and (max-width: 840px) {
+    background-image: url('/assets/backgrounds/space-880.jpg');
+  }
+
+  @media (min-width: 841px) and (max-width: 980px) {
+    background-image: url('/assets/backgrounds/space-1024.jpg');
+  }
+
+  @media (min-width: 981px) and (max-width: 1200px) {
+    background-image: url('/assets/backgrounds/space-1280.jpg');
+  }
+
+  @media (min-width: 1201px) and (max-width: 1320px) {
+    background-image: url('/assets/backgrounds/space-1400.jpg');
+  }
+
+  @media (min-width: 1321px) and (max-width: 1600px) {
+    background-image: url('/assets/backgrounds/space-1680.jpg');
+  }
+
+  @media (min-width: 1601px) and (max-width: 1840px) {
+    background-image: url('/assets/backgrounds/space-1920.jpg');
+  }
+
+  @media (min-width: 1841px) and (max-width: 2700px) {
+    background-image: url('/assets/backgrounds/space-2800.jpg');
+  }
+
+  @media (min-width: 2701px) and (max-width: 4800px) {
+    background-image: url('/assets/backgrounds/space-4800.jpg');
+  }
+
+}
+
+div.wrapper {
+  position: fixed;
+  width:100%;
+  height:100%;
+  text-align: center;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: backgroundAnimation 50s 0s infinite ease;
+  /*overflow-y: scroll;*/
+
+
+  div.egg {
+    display: none;
+    position: absolute;
+    z-index:10000;
+  }
+
+  &.showegg {
+    background-image: url('/assets/backgrounds/satoshi.jpg');
+    overflow:hidden;
+
+
+    * {
+      display:none;
+    }
+
+  }
+}
+
+div.egg {
+  display: none;
+  position: fixed;
+  top:10%;
+  left:0; right:0;
+  z-index:10000;
+  text-align: center;
+  font-size:2vmax;
+  color: $lightwhite;
+  @include stroke();
+
+
+  > div {
+    background-color:$halfblack;
+  }
+
+  &.showegg {
+    display: block;
+  }
+}
+
+
+audio {
+  position: absolute;
+  left:2vmin;
+  top:2vmin;
+  display:none;
+}
+
+span.img {
+  &.globe {
+    @include square-dimensions(50vmin);
+    @include background-cover('/assets/images/globe.png');
+    @include all-align(fixed);
+
+    &.tomoon {
+      animation:moonearth 6s 3s 1 forwards ease;
+    }
+  }
+
+  &.rocket {
+    @include square-dimensions(8vmin);
+    @include background-cover('/assets/images/rocket.png');
+    @include all-align(fixed);
+    transform:rotate(14deg) translateX(10vmin) translateY(-28vmin);
+    animation:fly1 6s 3s infinite ease;
+    z-index:2;
+    &.tomoon {
+      display: none;
+    }
+
+    &.rockmoon {
+      @include all-align(fixed);
+      transform:rotate(-64deg) translateX(-10vmin) translateY(-28vmin);
+
+      display: inline-block;
+      opacity:0.5;
+      animation:fly2 6s 0s 1 forwards ease;
+    }
+
+  }
+
+
+
+
+  &.moon {
+    @include square-dimensions(20vmin);
+    @include background-cover('/assets/images/moon.png');
+    @include all-align(fixed);
+    transform:translateX(40vmin) translateY(-60vmin);
+    z-index:1;
+
+    &.tomoon {
+      z-index:0;
+      animation:moonmoon 6s 3s 1 forwards ease;
+    }
+  }
+
+  &.bitcoin {
+    @include square-dimensions(5vmin);
+    @include background-cover('/assets/images/bitcoin.png');
+    position:absolute;
+    left:2vmin; bottom:2vmin;
+
+   /* &.rockmoon {
+      animation:fly3 2s 0s 1 forwards ease;
+    }*/
+  }
+
+  &.ethereum {
+    width:3.5vmin; height:5vmin;
+    @include background-cover('/assets/images/ethereum.png');
+    position:absolute;
+    right:2vmin; bottom:2vmin;
+
+    /*&.rockmoon {
+      animation:fly3 2s 0s 1 forwards ease;
+    }*/
+  }
+
+
+  &.mars {
+    @include square-dimensions(10vmin);
+    @include background-cover('/assets/images/mars.png');
+    @include all-align(fixed);
+    transform:translateX(-40vmin) translateY(-54vmin);
+    z-index:1;
+
+
+  }
+}
+
+
+
+div.textwrap {
+  position: absolute;
+  top:75%; left:0; right:0; bottom:0;
+
+  h1,h2,h3 {
+    color:$lightwhite;
+    line-height:155%;
+    margin:0;
+    @include stroke();
+  }
+
+  h1 {
+    font-size:6.5vmin;
+    img {
+      @include square-dimensions(6.5vmin);
+      margin:auto 1vmin auto 0;
+      position: relative;
+    }
+    em {
+      color:$lightgold;
+    }
+  }
+
+  h2 {
+    color:$lightwhite;
+    font-size:2.5vmin;
+  }
+
+  h3 {
+    margin-top: 5vmin;
+    color:$lightwhite;
+    font-size:2.5vmin;
+
+    &.tomoon {
+      text-decoration: line-through;
+    }
+  }
+
+}
+
+
+div.countdown-timer {
+  @include stroke();
+  @include all-align();
+
+  z-index:1000;
+
+  .time-to {
+    text-align:center;
+    font-family:Silom;
+    color:$lightwhite;
+
+
+    span {
+      display:inline-block;
+
+      i {
+        font-style: normal;
+        font-size: 3.5vmin;
+
+        span {
+          padding:.2vmin .5vmin;
+          border:.2vmin solid $halfwhite;
+          min-width:8vmin;
+          min-height:4vmin;
+          background-color: $darkblack;
+        }
+      }
+
+    }
+  }
+}
+
+section.twitter {
+
+  position: absolute;
+  left:75%;
+  transform: translateX(-25%) translateY(-40%);
+  top: 50%;
+  display:none;
+  opacity: 0;
+
+  @media (min-width: 0px) and (max-width: 800px) {
+    left:50%;
+    transform: translateX(-50%) translateY(-40%);
+  }
+
+  &.show {
+    display: block;
+    animation:fadein 1s 0s forwards ease;
+  }
+
+
+}
+
+
+footer {
+  position: absolute;
+  z-index:10000;
+  right: 2vmin;
+  top:1vmin;
+  text-align: right;
+
+  p {
+    color: $lightwhite;
+  }
+
+  a {
+    color:$lightwhite;
+
+    &:hover {
+      cursor:pointer;
+    }
+  }
+
+  .fa-heart {
+    color:#E10028;
+    opacity: 0.7;
+    animation:heart 2s 2s infinite ease;
+  }
+}

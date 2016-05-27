@@ -1,0 +1,82 @@
+/* animations */
+
+@keyframes backgroundAnimation {
+  0% { background-position:50% 50%; }
+  30% { background-position:60% 40%; }
+  70% { background-position:40% 60%; }
+  100% { background-position:50% 50%; }
+}
+
+@keyframes fly1 {
+  100% { transform: translateX(200vmin) translateY(-200vmin) }
+}
+
+@keyframes fly2 {
+  100% { transform:translateX(-120vmin) translateY(-200vmin); }
+}
+
+@keyframes fly3 {
+  100% { @include all-align(absolute); }
+}
+
+@keyframes fadein {
+  0% { opacity:0 }
+  100% { opacity:0.7 }
+}
+
+
+@keyframes moonmoon {
+  0% {
+    @include square-dimensions(20vmin);
+  }
+  100% {
+    @include square-dimensions(50vmin);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
+
+@keyframes moonearth {
+  0% {
+    @include square-dimensions(50vmin);
+  }
+
+  100% {
+    @include square-dimensions(20vmin);
+
+    -webkit-transform: translateX(40vmin) translateY(-60vmin);
+    -ms-transform: translateX(40vmin) translateY(-60vmin);
+    transform: translateX(40vmin) translateY(-60vmin);
+  }
+}
+
+
+
+
+@keyframes heart {
+  0% {
+    opacity:0.7;
+  }
+
+  40% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+
+  47%, 53% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  60% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity:0.7;
+  }
+
+}
