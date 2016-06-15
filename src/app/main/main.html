@@ -43,10 +43,15 @@
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </section>
 
+
+    <section class="meetup" ng-class="{'hide' : !vm.meetup}">
+        <iframe width="225" height="570" src="http://meetu.ps/2YctHt" frameborder="0"></iframe>
+    </section>
+
     <footer>
        <p>
-           <a href="http://www.dirkjandegroot.nl">MADE</a> WITH <i class="fa fa-heart" aria-hidden="true"></i> 4 CRYPTO - <a ng-click="vm.twitter = !vm.twitter">TOGGLE TWITTER</a>
-
+           <a href="http://www.dirkjandegroot.nl">MADE</a> WITH <i class="fa fa-heart" aria-hidden="true"></i> 4 CRYPTO <br/>
+           <a ng-click="vm.twitter = !vm.twitter">TOGGLE TWITTER</a> | <a ng-click="vm.meetup = !vm.meetup">TOGGLE MEETUP</a>
         </p>
 
         <p>PRESS CTRL+J</p>

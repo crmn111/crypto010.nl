@@ -199,7 +199,11 @@ div.textwrap {
     color:$lightwhite;
     line-height:155%;
     margin:0;
-    @include stroke();
+
+
+    @media (min-width: 640px) {
+      @include stroke();
+    }
   }
 
   h1 {
@@ -233,8 +237,11 @@ div.textwrap {
 
 
 div.countdown-timer {
-  @include stroke();
   @include all-align();
+
+  @media (min-width: 640px) {
+    @include stroke();
+  }
 
   z-index:1000;
 
@@ -265,7 +272,6 @@ div.countdown-timer {
 }
 
 section.twitter {
-
   position: absolute;
   left:75%;
   transform: translateX(-25%) translateY(-40%);
@@ -282,9 +288,28 @@ section.twitter {
     display: block;
     animation:fadein 1s 0s forwards ease;
   }
-
-
 }
+
+section.meetup {
+  position: absolute;
+  left:15%;
+  transform: translateX(-50%) translateY(-25%);
+  top: 47.5%;
+  display: block;
+
+  @media (min-width: 0px) and (max-width: 800px) {
+    left:50%;
+    transform: translateX(-50%) translateY(-40%);
+  }
+
+  &.hide {
+    /*display: block;*/
+    animation:fadeout 1s 0s forwards ease;
+  }
+}
+
+
+
 
 
 footer {

@@ -13,6 +13,7 @@
     vm.rockmoon = false;
     vm.showegg = false;
     vm.twitter = false;
+    vm.meetup = true;
 
 
     hotkeys.add({

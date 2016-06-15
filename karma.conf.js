@@ -50,7 +50,7 @@ module.exports = function(config) {
 
     ngHtml2JsPreprocessor: {
       stripPrefix: conf.paths.src + '/',
-      moduleName: 'crypto0102'
+      moduleName: 'crypto010'
     },
 
     logLevel: 'WARN',
