@@ -14,6 +14,7 @@
     vm.showegg = false;
     vm.twitter = false;
     vm.meetup = true;
+    vm.crypto010 = false;
 
 
     hotkeys.add({
@@ -33,15 +34,23 @@
     });
 
 
+    hotkeys.add({
+      combo: 'ctrl+g',
+      callback: function() {
+        vm.crypto010 = !vm.crypto010;
+      }
+    });
+
+
     $scope.onReady = function() {
-
-        vm.tomoon = true;
-
+      vm.tomoon = true;
         $timeout(function(){
-
           vm.rockmoon = true;
-        },10000);
-
+        },2500);
     };
+
+
+
+
   }
 })();

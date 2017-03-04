@@ -12,19 +12,18 @@
 
     <span class="img ethereum" ng-class="{'rockmoon' : vm.rockmoon}"></span>
 
-
     <div class="textwrap">
         <h1>CRYPTO<img src="/assets/favicon/apple-icon-60x60.png"><em>010</em> </h1>
 
-        <h2>Chat about Blockchain, Bitcoin, TheDAO, Ethereum, Trading, Developing and Moon</h2>
+        <h2>Chat about Trading Crypto Currencies, Development and Business.</h2>
 
-        <h3 ng-class="{'tomoon' : vm.tomoon}">Friday 1 July 2016 - Location: Hotel New York, Rotterdam - Time: 19:00</h3>
+        <h3 ng-class="{'tomoon' : vm.tomoon}">Friday 31 March 2017 - Location: Hotel New York, Rotterdam - Time: 19:00</h3>
     </div>
 
 
     <div class="countdown-timer">
         <div class="time-to">
-      <span countdown on-ready-callback="onReady()" date="July 1, 2016 19:00:00">
+      <span countdown on-ready-callback="onReady()" date="March 31, 2017 19:00:00">
           <i><span class="days">0</span> Days</i>
           <i><span class="hours">0</span> Hours</i>
           <i><span class="minutes">0</span> Minutes</i>
@@ -44,17 +43,23 @@
     </section>
 
 
-    <section class="meetup" ng-class="{'hide' : !vm.meetup}">
-        <iframe width="225" height="570" src="http://meetu.ps/2YctHt" frameborder="0"></iframe>
+   <!-- <section class="meetup" ng-class="{'hide' : !vm.meetup}">
+        <iframe width="225" height="570" src="https://meetu.ps/2YctHt" frameborder="0"></iframe>
+    </section>-->
+
+
+    <section class="crypto010" ng-class="{'show' : vm.crypto010}">
+        <a href="https://telegram.me/crypto010" target="_blank">Join Crypto010 on telegram</a>
     </section>
+
 
     <footer>
        <p>
            <a href="http://www.dirkjandegroot.nl">MADE</a> WITH <i class="fa fa-heart" aria-hidden="true"></i> 4 CRYPTO <br/>
-           <a ng-click="vm.twitter = !vm.twitter">TOGGLE TWITTER</a> | <a ng-click="vm.meetup = !vm.meetup">TOGGLE MEETUP</a>
+           <a ng-click="vm.twitter = !vm.twitter">TOGGLE TWITTER</a> <!--| <a ng-click="vm.meetup = !vm.meetup">TOGGLE MEETUP</a>-->
         </p>
 
-        <p>PRESS CTRL+J</p>
+        <p>PRESS CTRL+J - CTRL+G</p>
     </footer>
 
 </div>
@@ -64,6 +69,13 @@
     <div>
         <p>Press CTRL+J to toggle back to the main screen.</p>
 
-        <p>Contact us by joining our telegram group: <a href="https://telegram.me/joinchat/BdSr6wb8cpX-fKov_xXxxQ">EthereumNL</a>.</p>
+        <p>Contact us by joining one of our telegram groups: <a href="https://telegram.me/crypto010">Crypto010</a> or <a href="https://telegram.me/joinchat/BdSr6wb8cpX-fKov_xXxxQ">EthereumNL</a>.</p>
+
+        <p>Check out our telegram bot @INNOCOINbot.</p>
+
+        <p>Check out <a href="https://www.innocoin.com">innocoin.com</a> and <a href="https://www.worldcoinindex.com">worldcoinindex.com</a>.</p>
+
     </div>
 </div>
+
+
